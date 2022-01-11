@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(45, 45, 51);
+  /* background-color: rgb(45, 45, 51); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,8 +77,6 @@ body {
 .top {
   transform: translate3d(0px, -150px, 0px) rotateX(-90deg);
   background-color: #263645;
-  animation: cube-top 4s infinite steps(150);
-  animation-direction: alternate;
 }
 
 
@@ -96,94 +94,67 @@ body {
   box-shadow: 0px 0px 100px 30px rgba(28, 29, 30, 1);
  
 }
+.box {
+  display: flex;
+  align-items: flex-end;
+}
 
-@keyframes cube {
+.right::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: #26B460;
+  animation: kube 4s infinite alternate;
+}
+@keyframes kube{
   0% {
-      background-color: #233142;
-  }
-  5%{
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 100%, rgba(2, 0, 36, 1) 100%, rgba(35, 49, 66, 1) 100%);
-  }
-  10%{
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 90%, rgba(2, 0, 36, 1) 90%, rgba(35, 49, 66, 1) 90%);
-  }
-  15%{
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 85%, rgba(2, 0, 36, 1) 85%, rgba(35, 49, 66, 1) 85%);
-  }
-  20% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 80%, rgba(2, 0, 36, 1) 80%, rgba(35, 49, 66, 1) 80%);
-  }
-  25% {
-      background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 75%, rgba(2, 0, 36, 1) 75%, rgba(35, 49, 66, 1) 75%);
-  }
-  30% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 70%, rgba(2, 0, 36, 1) 70%, rgba(35, 49, 66, 1) 70%);
-  }
-  35% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 65%, rgba(2, 0, 36, 1) 65%, rgba(35, 49, 66, 1) 65%);
-  }
-  40% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 60%, rgba(2, 0, 36, 1) 60%, rgba(35, 49, 66, 1) 60%);
-  }
-  45% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 55%, rgba(2, 0, 36, 1) 55%, rgba(35, 49, 66, 1) 55%);
-  }
-  50% {
-      background-image: linear-gradient(to top, #25A759 50%, #233142 50%);
-  }
-  55% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 45%, rgba(2, 0, 36, 1) 45%, rgba(35, 49, 66, 1) 45%);
-  }
-  60% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 40%, rgba(2, 0, 36, 1) 40%, rgba(35, 49, 66, 1) 40%);
-  }
-  65% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 35%, rgba(2, 0, 36, 1) 35%, rgba(35, 49, 66, 1) 35%);
+    background-color: #26B460;
   } 
-  70% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 30%, rgba(2, 0, 36, 1) 30%, rgba(35, 49, 66, 1) 30%);
-  } 
-  75% {
-    background-image: linear-gradient(to top, #25A759 30%, #233142 30%);
-  }
-  80% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 25%, rgba(2, 0, 36, 1) 25%, rgba(35, 49, 66, 1) 25%);
-  }
-  85% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 20%, rgba(2, 0, 36, 1)20%, rgba(35, 49, 66, 1)20%);
-  }
-  90% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 20%, rgba(2, 0, 36, 1) 20%, rgba(35, 49, 66, 1) 20%);
-  }
-  95% {
-    background-image: linear-gradient(360deg, rgba(37, 167, 89, 1) 15%, rgba(2, 0, 36, 1) 15%, rgba(35, 49, 66, 1) 15%);
-  }
-  100% {
-    background-image: linear-gradient(to top, #25A759 10%, #233142 0%);
+  100% { 
+    background-color: #26B460;
+    height: 100%;
   }
 }
-@keyframes cube-top {
+@keyframes kube1{
   0% {
-      background-color: #233142;
+    height: 100%;
+  } 
+  100% { 
+    background-color: #26B460;
+    height: 100%;
   }
+}
+.left::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: #26B460;
+  animation: kube 4s infinite alternate;
+}
 
-  25% {
-      background-color: #233142;
-  }
+.back::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: #26B460;
+  animation: kube 4s infinite alternate;
+}
+.front::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10%;
+    background-color: #26B460;
+    animation: kube 4s infinite alternate;
+}
 
-  50% {
-      background-color: #233142;
-
-
-  }
-
-  90% {
-      background-color: #233142;
-
-  }
-
-  100% {
-      background-color: #26B460;
-      opacity: 0;
-  }
+.top::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0%;
+  animation: kube1 4.5s infinite alternate;
 }
